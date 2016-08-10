@@ -17,6 +17,8 @@
 		54AEB6B51D5AB75F0032D1A3 /* SlideImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6B41D5AB75F0032D1A3 /* SlideImages.swift */; };
 		54AEB6B71D5AB90B0032D1A3 /* Confi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6B61D5AB90B0032D1A3 /* Confi.swift */; };
 		54AEB6BB1D5ABFDA0032D1A3 /* SlideDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6BA1D5ABFDA0032D1A3 /* SlideDemoViewController.swift */; };
+		54AEB6BD1D5AD1310032D1A3 /* CountDownDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6BC1D5AD1310032D1A3 /* CountDownDemoViewController.swift */; };
+		54AEB6BF1D5AD2020032D1A3 /* CountDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6BE1D5AD2020032D1A3 /* CountDownBtn.swift */; };
 		C04DFD485385AEB684F33A0D /* Pods_SwiftTipsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11017E1BCF9E5E4BC2FE449 /* Pods_SwiftTipsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		54AEB6B41D5AB75F0032D1A3 /* SlideImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideImages.swift; sourceTree = "<group>"; };
 		54AEB6B61D5AB90B0032D1A3 /* Confi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confi.swift; sourceTree = "<group>"; };
 		54AEB6BA1D5ABFDA0032D1A3 /* SlideDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideDemoViewController.swift; sourceTree = "<group>"; };
+		54AEB6BC1D5AD1310032D1A3 /* CountDownDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownDemoViewController.swift; sourceTree = "<group>"; };
+		54AEB6BE1D5AD2020032D1A3 /* CountDownBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownBtn.swift; sourceTree = "<group>"; };
 		C11017E1BCF9E5E4BC2FE449 /* Pods_SwiftTipsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTipsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D89EBFD1493C7A44A3F1F9 /* Pods-SwiftTipsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTipsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTipsDemo/Pods-SwiftTipsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +118,7 @@
 				54AEB6831D5A09AD0032D1A3 /* AppDelegate.swift */,
 				54AEB6B11D5A0D350032D1A3 /* HomeTableViewController.swift */,
 				54AEB6BA1D5ABFDA0032D1A3 /* SlideDemoViewController.swift */,
+				54AEB6BC1D5AD1310032D1A3 /* CountDownDemoViewController.swift */,
 				54AEB6871D5A09AD0032D1A3 /* Main.storyboard */,
 				54AEB68A1D5A09AE0032D1A3 /* Assets.xcassets */,
 				54AEB68C1D5A09AE0032D1A3 /* LaunchScreen.storyboard */,
@@ -145,6 +150,7 @@
 			children = (
 				54AEB6B61D5AB90B0032D1A3 /* Confi.swift */,
 				54AEB6B41D5AB75F0032D1A3 /* SlideImages.swift */,
+				54AEB6BE1D5AD2020032D1A3 /* CountDownBtn.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -348,11 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AEB6BF1D5AD2020032D1A3 /* CountDownBtn.swift in Sources */,
 				54AEB6B21D5A0D350032D1A3 /* HomeTableViewController.swift in Sources */,
 				54AEB6BB1D5ABFDA0032D1A3 /* SlideDemoViewController.swift in Sources */,
 				54AEB6B71D5AB90B0032D1A3 /* Confi.swift in Sources */,
 				54AEB6B51D5AB75F0032D1A3 /* SlideImages.swift in Sources */,
 				54AEB6841D5A09AD0032D1A3 /* AppDelegate.swift in Sources */,
+				54AEB6BD1D5AD1310032D1A3 /* CountDownDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

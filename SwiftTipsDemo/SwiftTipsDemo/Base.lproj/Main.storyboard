@@ -15,15 +15,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="7Lh-G4-1Po" style="IBUITableViewCellStyleDefault" id="eco-8h-nab">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="7Lh-G4-1Po" style="IBUITableViewCellStyleDefault" id="eco-8h-nab">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eco-8h-nab" id="gw6-x5-tPa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lh-G4-1Po">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,6 +42,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="hbr-7D-dA3" kind="show" identifier="slide" id="EJb-Fr-wcX"/>
+                        <segue destination="P4s-si-scf" kind="show" identifier="countdown" id="PQQ-nV-Qcw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUn-Bz-wJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,6 +96,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdV-SC-9B4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="306"/>
+        </scene>
+        <!--倒计时按钮-->
+        <scene sceneID="beN-8q-C3c">
+            <objects>
+                <viewController id="P4s-si-scf" customClass="CountDownDemoViewController" customModule="SwiftTipsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Kp-YQ-SnO"/>
+                        <viewControllerLayoutGuide type="bottom" id="tI7-V7-8Kk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TaU-Sg-dVq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-Ia-eND" customClass="CountDownBtn" customModule="SwiftTipsDemo" customModuleProvider="target">
+                                <rect key="frame" x="120" y="110" width="80" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="f90-lx-iYT"/>
+                                    <constraint firstAttribute="width" constant="80" id="j3s-9j-zaK"/>
+                                </constraints>
+                                <state key="normal" title="无动画"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="enabled_bgColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="numberColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="noAnimationAction:" destination="P4s-si-scf" eventType="touchUpInside" id="ply-kg-HvO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCC-XF-YHU" customClass="CountDownBtn" customModule="SwiftTipsDemo" customModuleProvider="target">
+                                <rect key="frame" x="120" y="230" width="80" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="VkY-wK-01p"/>
+                                    <constraint firstAttribute="height" constant="45" id="fck-7e-nEs"/>
+                                </constraints>
+                                <state key="normal" title="缩放">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="enabled_bgColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="numberColor">
+                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scaleBtnAction:" destination="P4s-si-scf" eventType="touchUpInside" id="LnI-rL-jje"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv7-IU-nle" customClass="CountDownBtn" customModule="SwiftTipsDemo" customModuleProvider="target">
+                                <rect key="frame" x="120" y="170" width="80" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="WSa-ei-Rff"/>
+                                    <constraint firstAttribute="height" constant="45" id="wj5-mD-LNc"/>
+                                </constraints>
+                                <state key="normal" title="旋转">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="enabled_bgColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="numberColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rotateBtnAction:" destination="P4s-si-scf" eventType="touchUpInside" id="CD6-UY-m2I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NCC-XF-YHU" firstAttribute="centerX" secondItem="TaU-Sg-dVq" secondAttribute="centerX" id="Co9-P2-XKN"/>
+                            <constraint firstItem="U3g-Ia-eND" firstAttribute="centerX" secondItem="TaU-Sg-dVq" secondAttribute="centerX" id="MWz-rA-J82"/>
+                            <constraint firstItem="fv7-IU-nle" firstAttribute="centerX" secondItem="TaU-Sg-dVq" secondAttribute="centerX" id="OaG-Ig-fiK"/>
+                            <constraint firstItem="NCC-XF-YHU" firstAttribute="top" secondItem="fv7-IU-nle" secondAttribute="bottom" constant="15" id="eTj-Ad-9pG"/>
+                            <constraint firstItem="U3g-Ia-eND" firstAttribute="top" secondItem="1Kp-YQ-SnO" secondAttribute="bottom" constant="46" id="eVd-dz-wJ0"/>
+                            <constraint firstItem="fv7-IU-nle" firstAttribute="top" secondItem="U3g-Ia-eND" secondAttribute="bottom" constant="15" id="xd0-mB-fL9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="倒计时按钮" id="Jpr-kb-ZPE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVz-1D-FBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YhB-ot-T8J">

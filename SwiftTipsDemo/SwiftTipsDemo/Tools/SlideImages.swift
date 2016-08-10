@@ -56,7 +56,7 @@ class SlideImages: UIView ,UIScrollViewDelegate{
             setSlideImages()
         }
     }
-    
+    //需要的时候刷新内容大小，其实最好的方法是设置所有内容的约束，但是代码写约束太麻烦了，所以就用了这样的方式
     override func layoutSubviews() {
         super.layoutSubviews()
         setSlideImages()

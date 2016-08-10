@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
-    let arr = ["轮播图"]
+    let arr = ["轮播图","倒计时按钮"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -35,6 +35,8 @@ class HomeTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             performSegueWithIdentifier("slide", sender: nil)
+        case 1:
+            performSegueWithIdentifier("countdown", sender: nil)
         default:
             break
         }
