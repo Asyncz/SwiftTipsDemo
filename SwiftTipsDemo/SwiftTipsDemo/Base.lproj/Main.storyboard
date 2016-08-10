@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Demos-->
         <scene sceneID="fKO-fk-vD3">
             <objects>
                 <tableViewController id="hdi-3Q-dzi" customClass="HomeTableViewController" customModule="SwiftTipsDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,12 +15,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eco-8h-nab">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="7Lh-G4-1Po" style="IBUITableViewCellStyleDefault" id="eco-8h-nab">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eco-8h-nab" id="gw6-x5-tPa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lh-G4-1Po">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -28,12 +38,63 @@
                             <outlet property="delegate" destination="hdi-3Q-dzi" id="6mk-ua-gCE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="PRu-RM-9R3"/>
+                    <navigationItem key="navigationItem" title="Demos" id="PRu-RM-9R3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="hbr-7D-dA3" kind="show" identifier="slide" id="EJb-Fr-wcX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUn-Bz-wJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-271" y="306"/>
+        </scene>
+        <!--轮播图-->
+        <scene sceneID="7wg-an-ppe">
+            <objects>
+                <viewController id="hbr-7D-dA3" customClass="SlideDemoViewController" customModule="SwiftTipsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Trn-Nq-u30"/>
+                        <viewControllerLayoutGuide type="bottom" id="AHP-Bg-CwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wJk-bi-8Zs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5x-9z-JFO" customClass="SlideImages" customModule="SwiftTipsDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="186"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j5x-9z-JFO" secondAttribute="height" multiplier="160:93" id="4f6-bU-CrA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2O-LO-0CT" customClass="SlideImages" customModule="SwiftTipsDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="277" width="320" height="178"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l2O-LO-0CT" secondAttribute="height" multiplier="160:89" id="ra7-Gr-vyH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j5x-9z-JFO" firstAttribute="leading" secondItem="wJk-bi-8Zs" secondAttribute="leading" id="2zh-VL-dQi"/>
+                            <constraint firstItem="l2O-LO-0CT" firstAttribute="leading" secondItem="wJk-bi-8Zs" secondAttribute="leading" id="3vt-Ze-X6r"/>
+                            <constraint firstItem="l2O-LO-0CT" firstAttribute="top" secondItem="j5x-9z-JFO" secondAttribute="bottom" constant="27" id="MKr-3O-9en"/>
+                            <constraint firstAttribute="trailing" secondItem="j5x-9z-JFO" secondAttribute="trailing" id="NNr-o0-6Cc"/>
+                            <constraint firstAttribute="trailing" secondItem="l2O-LO-0CT" secondAttribute="trailing" id="PUX-pI-zPl"/>
+                            <constraint firstItem="j5x-9z-JFO" firstAttribute="top" secondItem="Trn-Nq-u30" secondAttribute="bottom" id="SlZ-9a-9cI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="轮播图" id="V06-7Z-Khe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="URLsSlide" destination="j5x-9z-JFO" id="i4M-79-E6L"/>
+                        <outlet property="imagesSlide" destination="l2O-LO-0CT" id="cQD-oF-FqA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdV-SC-9B4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YhB-ot-T8J">
