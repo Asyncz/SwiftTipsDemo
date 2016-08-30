@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let themeType:Int = NSUserDefaults.standardUserDefaults().integerForKey("theme")
+        switch themeType {
+        case 1:
+            ThemeManager.setType(.Type1)
+        default:
+            ThemeManager.setType(.Type2)
+        }
         return true
     }
 

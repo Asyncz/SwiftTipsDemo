@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5400158D1D75AFDF00D4D40D /* ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400158C1D75AFDF00D4D40D /* ThemeSettingViewController.swift */; };
+		548CDD0E1D61BD9000430223 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CDD0D1D61BD9000430223 /* ThemeManager.swift */; };
 		54AEB6841D5A09AD0032D1A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEB6831D5A09AD0032D1A3 /* AppDelegate.swift */; };
 		54AEB6891D5A09AD0032D1A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AEB6871D5A09AD0032D1A3 /* Main.storyboard */; };
 		54AEB68B1D5A09AE0032D1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AEB68A1D5A09AE0032D1A3 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0A6C9AD4F60005F87134EE2A /* Pods-SwiftTipsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTipsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTipsDemo/Pods-SwiftTipsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5400158C1D75AFDF00D4D40D /* ThemeSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeSettingViewController.swift; sourceTree = "<group>"; };
+		548CDD0D1D61BD9000430223 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		54AEB6801D5A09AD0032D1A3 /* SwiftTipsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTipsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AEB6831D5A09AD0032D1A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEB6881D5A09AD0032D1A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				54AEB6B11D5A0D350032D1A3 /* HomeTableViewController.swift */,
 				54AEB6BA1D5ABFDA0032D1A3 /* SlideDemoViewController.swift */,
 				54AEB6BC1D5AD1310032D1A3 /* CountDownDemoViewController.swift */,
+				5400158C1D75AFDF00D4D40D /* ThemeSettingViewController.swift */,
 				54AEB6871D5A09AD0032D1A3 /* Main.storyboard */,
 				54AEB68A1D5A09AE0032D1A3 /* Assets.xcassets */,
 				54AEB68C1D5A09AE0032D1A3 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 				54AEB6B61D5AB90B0032D1A3 /* Confi.swift */,
 				54AEB6B41D5AB75F0032D1A3 /* SlideImages.swift */,
 				54AEB6BE1D5AD2020032D1A3 /* CountDownBtn.swift */,
+				548CDD0D1D61BD9000430223 /* ThemeManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 				54AEB6BF1D5AD2020032D1A3 /* CountDownBtn.swift in Sources */,
 				54AEB6B21D5A0D350032D1A3 /* HomeTableViewController.swift in Sources */,
 				54AEB6BB1D5ABFDA0032D1A3 /* SlideDemoViewController.swift in Sources */,
+				548CDD0E1D61BD9000430223 /* ThemeManager.swift in Sources */,
+				5400158D1D75AFDF00D4D40D /* ThemeSettingViewController.swift in Sources */,
 				54AEB6B71D5AB90B0032D1A3 /* Confi.swift in Sources */,
 				54AEB6B51D5AB75F0032D1A3 /* SlideImages.swift in Sources */,
 				54AEB6841D5A09AD0032D1A3 /* AppDelegate.swift in Sources */,

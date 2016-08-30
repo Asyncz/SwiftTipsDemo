@@ -10,10 +10,18 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
-    let arr = ["轮播图","倒计时按钮"]
+    let arr = ["轮播图","倒计时按钮","模式切换"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        
+        //测试模式切换
+        tableView.themeBlock1 = { _ in
+            self.tableView.backgroundColor = UIColor.yellowColor()
+        }
+        tableView.themeBlock2 = { _ in
+            self.tableView.backgroundColor = UIColor.whiteColor()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +45,8 @@ class HomeTableViewController: UITableViewController {
             performSegueWithIdentifier("slide", sender: nil)
         case 1:
             performSegueWithIdentifier("countdown", sender: nil)
+        case 2:
+            performSegueWithIdentifier("theme", sender: nil)
         default:
             break
         }

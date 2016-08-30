@@ -26,7 +26,7 @@
                                             <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -43,6 +43,7 @@
                     <connections>
                         <segue destination="hbr-7D-dA3" kind="show" identifier="slide" id="EJb-Fr-wcX"/>
                         <segue destination="P4s-si-scf" kind="show" identifier="countdown" id="PQQ-nV-Qcw"/>
+                        <segue destination="xtm-sv-QB8" kind="show" identifier="theme" id="IsU-8F-xqo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUn-Bz-wJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,6 +97,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdV-SC-9B4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="306"/>
+        </scene>
+        <!--主题切换-->
+        <scene sceneID="vIE-aG-EVe">
+            <objects>
+                <viewController id="xtm-sv-QB8" customClass="ThemeSettingViewController" customModule="SwiftTipsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oWr-PD-vIM"/>
+                        <viewControllerLayoutGuide type="bottom" id="TNM-N7-IHj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AmE-Uw-idp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Es7-03-v0c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="nJd-Bk-KEx" style="IBUITableViewCellStyleDefault" id="WkS-hf-BR3">
+                                        <rect key="frame" x="0.0" y="113.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WkS-hf-BR3" id="Zma-7b-VNC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nJd-Bk-KEx">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xtm-sv-QB8" id="bjd-Yr-lgU"/>
+                                    <outlet property="delegate" destination="xtm-sv-QB8" id="ayg-tE-FYb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Es7-03-v0c" firstAttribute="leading" secondItem="AmE-Uw-idp" secondAttribute="leading" id="VYB-GA-DqO"/>
+                            <constraint firstItem="Es7-03-v0c" firstAttribute="top" secondItem="AmE-Uw-idp" secondAttribute="top" id="aSx-Ra-U8t"/>
+                            <constraint firstItem="TNM-N7-IHj" firstAttribute="top" secondItem="Es7-03-v0c" secondAttribute="bottom" id="ffB-NZ-0ti"/>
+                            <constraint firstAttribute="trailing" secondItem="Es7-03-v0c" secondAttribute="trailing" id="juq-ja-nw3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="主题切换" id="GKZ-VR-my5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Es7-03-v0c" id="yV7-xp-8fn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5x-tX-fMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="1572"/>
         </scene>
         <!--倒计时按钮-->
         <scene sceneID="beN-8q-C3c">
